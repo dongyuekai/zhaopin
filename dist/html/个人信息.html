@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css">
+    <script>
+    // rem 字体适配
+    (function () {
+        function changeRem() {
+            var viewWidth = document.documentElement.clientWidth;
+            var oHtml = document.getElementsByTagName('html')[0];
+            oHtml.style.fontSize = viewWidth * 16 / 375 + 'px';
+        }
+        changeRem();
+        window.addEventListener('resize', changeRem, false);
+    }());
+    </script>
+</head>
+<body>
+
+<div class="page-note">请如实填写您的信息，本页内容全部为必填</div>
+<div class="page-wrapper">
+    <form class="form-wrapper compact">
+        <div class="form-title">基本信息</div>
+        <div class="form-item name">
+            <a class="input-box select" href="修改姓名.html">
+                <label for="name">姓名</label>
+                <input readonly="" type="text" name="name" id="name" class="input-styled error" placeholder="请输入真实姓名">
+            </a>
+        </div>
+        <div class="form-item sex">
+            <div class="input-box select">
+                <label for="sex">性别</label>
+                <!--选择后加class selected-->
+                <select name="sex" id="sex" class="input-styled" onchange="selectChange(this)">
+                    <option value="">请选择性别</option>
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+                <!--<input type="text" name="sex" id="sex" class="input-styled error" placeholder="请选择性别">-->
+            </div>
+        </div>
+        <div class="form-item email">
+            <div class="input-box">
+                <label for="email">邮箱</label>
+                <input type="email" name="email" id="email" class="input-styled" placeholder="请输入邮箱地址">
+            </div>
+        </div>
+        <div class="form-item mobile">
+            <div class="input-box">
+                <label for="mobile">手机号</label>
+                <input readonly="" type="text" name="mobile" id="mobile" class="input-styled readonly" value="15811111111">
+            </div>
+        </div>
+
+        <div class="form-title">学习/能力</div>
+        <div class="form-item education">
+            <div class="input-box select">
+                <label for="education">学历</label>
+                <!--选择后加class selected-->
+                <select name="education" id="education" class="input-styled error" onchange="selectChange(this)">
+                    <option value="">请选择学历</option>
+                    <option value="1">本科</option>
+                    <option value="2">专科</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-item university">
+            <div class="input-box select">
+                <label for="university">毕业院校</label>
+                <!--选择后加class selected-->
+                <input type="text" name="university" id="university" class="input-styled" placeholder="请输入毕业院校">
+            </div>
+        </div>
+        <div class="form-item experience">
+            <div class="input-box select">
+                <label for="experience">工作经验</label>
+                <!--选择后加class selected-->
+                <select name="experience" id="experience" class="input-styled" onchange="selectChange(this)">
+                    <option value="">请选择工作经验</option>
+                    <option value="1">在校学生</option>
+                    <option value="2">1年以内</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-item resume">
+            <a class="input-box select" href="上传简历.html">
+                <label for="resume">简历</label>
+                <input readonly="" type="text" name="resume" id="resume" class="input-styled" placeholder="请上传简历">
+            </a>
+        </div>
+    </form>
+
+    <div class="btn-style">保存</div>
+</div>
+
+<script>
+
+    /**
+     * select 选择后回调函数
+     * @param e {Dom}
+     */
+    function selectChange(e) {
+        if (e.value != '') {
+            e.classList.add ('selected')
+        } else {
+            e.classList.remove('selected')
+        }
+    }
+</script>
+
+</body>
+</html>

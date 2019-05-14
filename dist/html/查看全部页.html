@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>查看全部页</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css">
+    <script>
+    // rem 字体适配
+    (function () {
+        function changeRem() {
+            var viewWidth = document.documentElement.clientWidth;
+            var oHtml = document.getElementsByTagName('html')[0];
+            oHtml.style.fontSize = viewWidth * 16 / 375 + 'px';
+        }
+        changeRem();
+        window.addEventListener('resize', changeRem, false);
+    }());
+    </script>
+</head>
+<body>
+<!-- header start -->
+<div class="header">
+    <a href="#" class="btn-return"><i></i></a>
+    <div class="tit">
+      <ul>
+        <li class="active">全部职位</li>
+        <li><a href="#">应聘记录</a></li>
+      </ul>
+    </div>
+    <a href="#" class="btn-my"><i></i></a>
+</div>
+<!-- header end -->
+
+<!-- search start -->
+<div class="search-box2">
+    <div class="input-box"><input type="text" placeholder="输入职位关键词" class="input-search"><i class="ico-search"></i></div>
+</div>
+<!-- search end -->
+
+<!-- 筛选 start -->
+<div class="filter-box" id="filterBox">
+  <ul>
+    <li>工作地点 <i class="arrow"></i></li>
+    <li>所属部门 <i class="arrow"></i></li>
+    <li>职能类别 <i class="arrow"></i></li>
+  </ul>
+</div>
+<div class="filter-item" id="filterItem" style="display: none">
+  <ul id="item0" style="display: none">
+    <li class="active">不限</li>
+    <li>北京</li>
+    <li>上海</li>
+    <li>广州</li>
+  </ul>
+  <ul id="item1" style="display: none">
+    <li class="active">不限</li>
+    <li>经销商事业部</li>
+    <li>二手车事业部</li>
+    <li>技术部</li>
+    <li>新车电商事业部</li>
+    <li>大数据部</li>
+    <li>汽车金融部</li>
+    <li>车服务部</li>
+    <li>用户产品中心</li>
+    <li>商业运营中心</li>
+    <li>资讯中心</li>
+    <li>营销中心</li>
+    <li>职能类部门</li>
+    <li class="long">公共事务和大客户部</li>
+    <li>其他</li>
+  </ul>
+  <ul id="item2" style="display: none">
+    <li class="active">不限</li>
+    <li>研发类</li>
+    <li>成本类</li>
+    <li>管理类</li>
+    <li>销售类</li>
+    <li>高管类</li>
+  </ul>
+  <div class="btn-confirm" id="btnConfirm">确定</div>
+</div>
+<div class="filter-mask" id="filterMask" style="display: none"></div>
+<!-- 筛选 end -->
+
+<!-- 列表 start -->
+<div class="join-wrap join-wrap-all">
+    <ul>
+        <li>
+            <a href="#">
+                <dl>
+                    <dt>自然语言处理资深算法工程师—大数据部</dt>
+                    <dd>全职/北京/大数据部</dd>
+                </dl>
+                <div class="right-block">
+                    <strong>30-40K</strong>
+                    <span>查看</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <dl>
+                    <dt>画像算法工程师—大数据部</dt>
+                    <dd>全职/北京/大数据部</dd>
+                </dl>
+                <div class="right-block">
+                    <strong>30-40K</strong>
+                    <span>查看</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <dl>
+                    <dt>画像算法工程师—大数据部</dt>
+                    <dd>全职/北京/大数据部</dd>
+                </dl>
+                <div class="right-block">
+                    <strong>30-40K</strong>
+                    <span>查看</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <dl>
+                    <dt>画像算法工程师—大数据部</dt>
+                    <dd>全职/北京/大数据部</dd>
+                </dl>
+                <div class="right-block">
+                    <strong>30-40K</strong>
+                    <span>查看</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <dl>
+                    <dt>画像算法工程师—大数据部</dt>
+                    <dd>全职/北京/大数据部</dd>
+                </dl>
+                <div class="right-block">
+                    <strong>面谈</strong>
+                    <span>查看</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <dl>
+                    <dt>画像算法工程师—大数据部</dt>
+                    <dd>全职/北京/大数据部</dd>
+                </dl>
+                <div class="right-block">
+                    <strong>30-40K</strong>
+                    <span>查看</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <dl>
+                    <dt>画像算法工程师—大数据部</dt>
+                    <dd>全职/北京/大数据部</dd>
+                </dl>
+                <div class="right-block">
+                    <strong>30-40K</strong>
+                    <span>查看</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="btn-more">加载更多 <i></i></div>
+</div>
+<!-- 列表 end -->
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script>
+// 筛选
+$('#filterBox li').click(function(){
+  $('#filterBox li').removeClass('active')
+  $(this).addClass('active');
+  $('#filterItem').show();
+  $('#filterMask').show();
+  var idx = $(this).index();
+  $('#filterItem ul').hide();
+  $('#item'+idx).show();
+});
+$('#filterMask, #btnConfirm').click(function(){
+  $('#filterBox li').removeClass('active');
+  $('#filterItem ul').hide();
+  $('#filterItem').hide();
+  $('#filterMask').hide();
+});
+</script>
+</body>
+</html>

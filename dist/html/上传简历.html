@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>上传简历</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css">
+    <script>
+    // rem 字体适配
+    (function () {
+        function changeRem() {
+            var viewWidth = document.documentElement.clientWidth;
+            var oHtml = document.getElementsByTagName('html')[0];
+            oHtml.style.fontSize = viewWidth * 16 / 375 + 'px';
+        }
+        changeRem();
+        window.addEventListener('resize', changeRem, false);
+    }());
+    </script>
+</head>
+<body>
+
+<div class="page-note">
+    手机上传只支持jpg/png图片，不超过3M <br>
+    如需上传doc/pdf或其他格式文件，请登录PC站</div>
+
+<div class="page-wrapper">
+
+    <form class="form-wrapper compact form-file">
+        <div class="form-item file">
+            <div class="file-box">
+                <div class="file-name" id="fileName">上传简历</div>
+                <div class="file-action" onclick="chooseFile()">选择</div>
+                <input type="file" accept="image/*" onchange="fileChange(this)" style="display: none" name="file" id="file">
+            </div>
+        </div>
+    </form>
+
+    <div class="btn-style">确认上传</div>
+</div>
+
+<script>
+    // 触发文件选择
+    function chooseFile() {
+        document.getElementById('file').click()
+    }
+
+    /**
+     * 上传文件选择回调
+     * @param e
+     */
+    function fileChange(e) {
+        if (e.files[0].size > 1024 * 3 * 1024) {
+            console.log('文件大于3m!')
+            e.form.reset();
+            return;
+        }
+        document.getElementById('fileName').innerText = e.files[0].name
+    }
+</script>
+
+</body>
+</html>

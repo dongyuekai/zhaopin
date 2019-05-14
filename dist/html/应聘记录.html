@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>应聘记录</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css">
+    <script>
+    // rem 字体适配
+    (function () {
+        function changeRem() {
+            var viewWidth = document.documentElement.clientWidth;
+            var oHtml = document.getElementsByTagName('html')[0];
+            oHtml.style.fontSize = viewWidth * 16 / 375 + 'px';
+        }
+        changeRem();
+        window.addEventListener('resize', changeRem, false);
+    }());
+    </script>
+</head>
+<body>
+<!-- header start -->
+<div class="header">
+    <a href="#" class="btn-return"><i></i></a>
+    <div class="tit">
+      <ul>
+        <li><a href="#">全部职位</a></li>
+        <li class="active">应聘记录</li>
+      </ul>
+    </div>
+    <a href="#" class="btn-my"><i></i></a>
+</div>
+<!-- header end -->
+
+<!-- 应聘记录 start -->
+<div class="job-record">
+    <div class="record-tips">温馨提示：如果您符合职位要求，我们会在三周内回复</div>
+    <div class="join-wrap join-wrap-end">
+        <ul>
+            <li>
+                <a href="#">
+                    <dl>
+                        <dt>自然语言处理资深算法工程师—大数据部</dt>
+                        <dd>全职/北京/大数据部<br>投递时间：2019-1-24</dd>
+                    </dl>
+                    <div class="right-block">
+                        <em>已投递</em>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <dl>
+                        <dt>画像算法工程师—大数据部</dt>
+                        <dd>全职/北京/大数据部<br>投递时间：2019-1-24</dd>
+                    </dl>
+                    <div class="right-block">
+                        <em>已入职</em>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 应聘记录 end -->
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css">
+    <script>
+    // rem 字体适配
+    (function () {
+        function changeRem() {
+            var viewWidth = document.documentElement.clientWidth;
+            var oHtml = document.getElementsByTagName('html')[0];
+            oHtml.style.fontSize = viewWidth * 16 / 375 + 'px';
+        }
+        changeRem();
+        window.addEventListener('resize', changeRem, false);
+    }());
+    </script>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <form class="form-wrapper">
+        <div class="form-item mobile">
+            <div class="input-box">
+                <input type="text" name="mobile" class="input-styled" placeholder="请输入11位手机号">
+            </div>
+            <div class="note-info">手机号码格式不正确</div>
+        </div>
+        <div class="form-item mobile-code">
+            <div class="input-box">
+                <input type="text" name="mobileCode" class="input-styled" placeholder="请输入短信验证码">
+                <span class="ico txt" onclick="getVerify(this)">获取验证码</span>
+                <!--<span class="ico txt disabled">重新获取（58s）</span>-->
+            </div>
+            <div class="note-info">错误提示...</div>
+        </div>
+        <div class="form-item password">
+            <div class="input-box">
+                <input type="password" name="password" class="input-styled" placeholder="请输入登录密码">
+                <span class="ico eye"></span>
+            </div>
+            <div class="note-info hide">密码格式错误...</div>
+        </div>
+        <div class="form-item verify">
+            <div class="input-box">
+                <input type="text" name="verify" class="input-styled" placeholder="请输入图片验证码">
+                <span class="ico verify">
+                <img src="http://via.placeholder.com/140x54" alt="">
+            </span>
+            </div>
+            <div class="note-info hide">...</div>
+        </div>
+
+        <div class="btn-style login" onclick="btnConfirm()">确定</div>
+        <div class="option-other clearfix">
+            <a href="#" class="lnk-style go-login">去登录</a>
+        </div>
+    </form>
+</div>
+
+<!--提示弹层 begin-->
+<!--切换class的 hide 隐藏和显示浮层-->
+<div class="pop-mask hide" id="popMask">
+    <div class="pop-info">
+        <div class="ico"></div>
+        <div class="txt-main">注册成功</div>
+        <div class="txt-note">期待成为“一家人”！</div>
+    </div>
+</div>
+<!--提示弹层 end-->
+
+<script>
+
+    var popMask = document.getElementById('popMask');
+
+    /**
+     * 注册提交按钮
+     */
+    function btnConfirm() {
+        popMask.classList.remove('hide');
+    }
+
+    /**
+     * 弹层关闭功能
+     */
+    popMask.addEventListener('click', function (e) {
+        this.classList.add('hide');
+    }, false)
+
+    /**
+     * 获取验证码
+     */
+    function getVerify(e) {
+        if (!e.classList.contains('disabled')) {
+            e.classList.add('disabled');
+            e.innerText = '重新获取（60s）';
+            var time = 59;
+            var interval = setInterval(function () {
+                if (time <=0 ) {
+                    clearInterval(interval);
+                    e.classList.remove('disabled');
+                    e.innerText = '重新获取';
+                } else {
+                    e.innerText = '重新获取（' + time-- + 's）';
+                }
+            }, 1000);
+        }
+    }
+
+</script>
+
+</body>
+</html>
